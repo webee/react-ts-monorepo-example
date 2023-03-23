@@ -11,3 +11,7 @@ Key points:
    make IDE [goto definition] to source instead of dist
 5. vite.config.js/resolve/alias
    make sibling dependencies as source dependencies.
+
+packages:
+`lerna list --all`
+set `"private": true` for non-package project
