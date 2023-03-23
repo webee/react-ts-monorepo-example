@@ -6,6 +6,7 @@ import typescript from 'rollup-plugin-typescript2'
 import postcss from 'rollup-plugin-postcss'
 import terser from '@rollup/plugin-terser'
 import autoprefixer from 'autoprefixer'
+import del from 'rollup-plugin-delete'
 import dts from 'rollup-plugin-dts'
 
 const require = createRequire(import.meta.url)
@@ -28,10 +29,11 @@ export default [
       },
     ],
     plugins: [
+      del({ targets: 'dist', verbose: true }),
       peerDepsExternal(),
       nodeResolve(),
       commonjs(),
-      typescript({ tsconfig: './tsconfig.build.json' }),
+      typescript({ tsconfig: './tsconfig.build.json', useTsconfigDeclarationDir: true }),
       postcss({
         plugins: [autoprefixer()],
         sourceMap: true,
@@ -42,9 +44,9 @@ export default [
     ],
   },
   {
-    input: 'dist/esm/index.d.ts',
+    input: 'dist/dts/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'es' }],
     external: [/\.css$/u],
-    plugins: [dts()],
+    plugins: [dts(), del({ targets: ['dist/dts'], hook: 'buildEnd', verbose: true })],
   },
 ]
