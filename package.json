@@ -1,0 +1,26 @@
+{
+  "name": "@webee/demotopic-root",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "playgrounds/*",
+    "documentations/*"
+  ],
+  "scripts": {
+    "commit": "cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "lerna": "^6.5.1",
+    "typescript": "^5.0.2"
+  }
+}

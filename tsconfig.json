@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      // comply with project directory and file specifications
+      // make [goto definition] to the source instead of dist file.
+      "@webee/demotopic-*": ["packages/*/src/index.ts"]
+    }
+  }
+}
