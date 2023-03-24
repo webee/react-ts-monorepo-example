@@ -13,7 +13,7 @@
     "commit": "cz",
     "build": "lerna run build",
     "version": "lerna version --no-private",
-    "publish": "lerna publish --no-private"
+    "publish": "lerna exec --no-private -- npm publish"
   },
   "config": {
     "commitizen": {
