@@ -12,7 +12,9 @@
     "publish": "npm run build && npm publish --access public"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
   ],
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
