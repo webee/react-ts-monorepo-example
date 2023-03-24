@@ -10,7 +10,8 @@
     "documentations/*"
   ],
   "scripts": {
-    "commit": "cz"
+    "commit": "cz",
+    "build": "lerna run build"
   },
   "config": {
     "commitizen": {
@@ -20,7 +21,7 @@
   "devDependencies": {
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
-    "lerna": "^6.5.1",
+    "lerna": "^6.6.0",
     "typescript": "^5.0.2"
   }
 }

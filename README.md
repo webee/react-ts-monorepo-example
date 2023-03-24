@@ -1,6 +1,6 @@
 # Monorepo Example for React Typescript Projects
 
-Key points:
+## Key points:
 
 1. lerna && yarn workspace
    share dependencies, link packages together.
@@ -12,6 +12,16 @@ Key points:
 5. vite.config.js/resolve/alias
    make sibling dependencies as source dependencies.
 
-packages:
+## packages:
+
 `lerna list --all`
 set `"private": true` for non-package project
+
+## versioning and publishing
+
+https://github.com/lerna/lerna
+https://lerna.js.org/docs/features/version-and-publish
+
+## git
+
+commitizen
